@@ -7,7 +7,7 @@ export default async function init(el) {
   const name = textArr[1] || 'World';
   const hello = textArr[0] || 'Hello';
   const { createTag, loadScript } = await import(`${getLibs()}/utils/utils.js`);
-  await loadScript('/deps/gsap.min.js');
+  await loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js');
   const helloEl = createTag('h2', { class: 'hello-title' }, `${hello},`);
   const nameEl = createTag('p', { class: 'hello-name' }, name);
   el.append(helloEl, nameEl);
